@@ -24,6 +24,13 @@ def prevent_idle_timeout():
     except Exception as e:
         print(f"Error encountered: {e}", flush=True)
 
+# Energy Regeneration Function (Runs in a Thread)
+def energy_regen():
+    while True:
+        print("Regenerating energy...", flush=True)
+        time.sleep(10800)  # Every 3 hours
+
+
 USER_FILE = "users.txt"
 LOG_FILE = "log.txt"
 
@@ -364,12 +371,11 @@ if __name__ == "__main__":
     # Start the keep-alive print function in the background
     threading.Thread(target=prevent_idle_timeout, daemon=True).start()
 
-    # Start the energy regeneration function in the background
+    # ✅ Now the function exists before being used
     threading.Thread(target=energy_regen, daemon=True).start()
 
     print("Bot is now running!", flush=True)
     
-    # Start the bot
 
 while True:
     try:
