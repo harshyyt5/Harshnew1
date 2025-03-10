@@ -14,13 +14,7 @@ admin_id = {"5373866044"}
 
 USER_FILE = "users.txt"
 LOG_FILE = "log.txt"
-def prevent_idle_timeout():
-    try:
-        while True:
-            print("Still running...", flush=True)
-            time.sleep(10)
-    except Exception as e:  # ✅ Correct indentation
-        print(f"Error encountered: {e}", flush=True)
+
 def read_users():
     try:
         with open(USER_FILE, "r") as file:
@@ -355,18 +349,6 @@ def broadcast_message(message):
 
     bot.reply_to(message, response)
 
-
-if __name__ == "__main__":
-    # Start the keep-alive print function in the background
-    threading.Thread(target=prevent_idle_timeout, daemon=True).start()
-
-    # Start the energy regeneration function in the background
-    threading.Thread(target=energy_regen, daemon=True).start()
-
-    print("Bot is now running!", flush=True)
-    
-    # Start the bot
-    
 
 while True:
     try:
