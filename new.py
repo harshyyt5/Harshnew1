@@ -282,7 +282,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ Raj Family ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
+    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ Harsh VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
 🤖Try To Run This Command : /help 
 '''
     bot.reply_to(message, response)
