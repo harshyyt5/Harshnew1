@@ -4,13 +4,25 @@ import telebot
 import subprocess
 import datetime
 import os
-
+import time
+import threading
 # Insert your Telegram bot token here
 bot = telebot.TeleBot('8033755504:AAF77C1RnV5CTN31X22801CGBgjwq07p4To')
 
 # Admin user IDs
 admin_id = {"5373866044"}
 
+
+print("Script started...", flush=True)
+
+# Function to prevent idle timeout (runs in a separate thread)
+def prevent_idle_timeout():
+    try:
+        while True:
+            print("Still running...", flush=True)
+            time.sleep(10)  # Sleep for 10 seconds
+    except Exception as e:
+        print(f"Error encountered: {e}", flush=True)
 
 USER_FILE = "users.txt"
 LOG_FILE = "log.txt"
@@ -348,7 +360,16 @@ def broadcast_message(message):
         response = "ᵀᵁᴹˢᴱ ᴺᴬ ᴴᴼ ᴾᴬʸᴱᴳᴬ🤣"
 
     bot.reply_to(message, response)
+if __name__ == "__main__":
+    # Start the keep-alive print function in the background
+    threading.Thread(target=prevent_idle_timeout, daemon=True).start()
 
+    # Start the energy regeneration function in the background
+    threading.Thread(target=energy_regen, daemon=True).start()
+
+    print("Bot is now running!", flush=True)
+    
+    # Start the bot
 
 while True:
     try:
