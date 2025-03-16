@@ -1,4 +1,4 @@
-#@@Navin_Pre
+#@Navin_Pre
 
 import telebot
 import subprocess
