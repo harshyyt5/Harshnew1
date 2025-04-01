@@ -28,7 +28,7 @@ def prevent_idle_timeout():
 def energy_regen():
     while True:
         print("Regenerating energy...", flush=True)
-        time.sleep(10800000000000000000)  # Every 3 hours
+        time.sleep(10800)  # Every 3 hours
 
 
 USER_FILE = "users.txt"
