@@ -1,4 +1,4 @@
-#@Navin_Pre
+#@HarshOP001
 
 import telebot
 import subprocess
@@ -7,7 +7,7 @@ import os
 import time
 import threading
 # Insert your Telegram bot token here
-bot = telebot.TeleBot('8129493085:AAF8BD4iv2GMogWUOnunDhkul6jAjWpGbEE')
+bot = telebot.TeleBot('8033755504:AAF77C1RnV5CTN31X22801CGBgjwq07p4To')
 
 # Admin user IDs
 admin_id = {"5373866044"}
@@ -213,7 +213,7 @@ def start_attack_reply(message, king, soulking, time):
     user_info = message.from_user
     username = user_info.username if user_info.username else user_info.first_name
     
-    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: NAVIN\n\n🌟 NAVIN DDOS OFFICIAL..!💀"
+    response = f"{username}, ✅🔥𝘾𝙊𝙉𝙂𝙍𝘼𝙏𝙐𝙇𝘼𝙏𝙄𝙊𝙉𝙎🔥✅\n\n𝐓𝐚𝐫𝐠𝐞𝐭: {king}\n𝐏𝐨𝐫𝐭: {soulking}\n𝐓𝐢𝐦𝐞: {time} 𝐒𝐞𝐜𝐨𝐧𝐝𝐬\n𝐌𝐞𝐭𝐡𝐨𝐝: Harsh\n\n🌟 HARSH DDOS OFFICIAL..!💀"
     bot.reply_to(message, response)
 
 soul_cooldown = {}
@@ -250,7 +250,7 @@ def handle_soul(message):
         else:
             response = "✅A͢v͢a͢i͢l͢a͢b͢l͢e͢ r͢i͢g͢h͢t͢ n͢o͢w͢✅ :- /attack <IP> <PORT> <time>"  
     else:
-        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @Navin_Pre ."
+        response = " ミ🥹★ 𝘈𝘤𝘤𝘦𝘴𝘴 𝘭𝘦 𝘭𝘦 𝘣𝘳𝘰 ★🥹彡DM - @HarshOP001 ."
 
     bot.reply_to(message, response)
 
@@ -301,7 +301,7 @@ def show_help(message):
 @bot.message_handler(commands=['start'])
 def welcome_start(message):
     user_name = message.from_user.first_name
-    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ NAVIN VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
+    response = f'''ıllıllı⭐🌟 W͙e͙l͙c͙o͙m͙e͙ t͙o͙ Harsh VIP DDOS ❣️ 🌟⭐ıllıllı \n {user_name}! \n🄱🄶🄼🄸 🄺🄸 🄶🄰🄽🄳 🄼🄰🅁🄽🄴 🄰🄰 🄶🅈🄴😜
 🤖Try To Run This Command : /help 
 '''
     bot.reply_to(message, response)
@@ -327,7 +327,7 @@ Vip 🌟 :
 -> Concurrents Attack : 3
 
 Pr-ice List💸 :
-massage :- @Navin_Pre
+massage :- @HarshOP001 
 '''
     bot.reply_to(message, response)
 
@@ -352,7 +352,7 @@ def broadcast_message(message):
     if user_id in admin_id:
         command = message.text.split(maxsplit=1)
         if len(command) > 1:
-            message_to_broadcast = "⚠️ Message To All Users By Admin:\n\n" + command[1]
+            message_to_broadcast = "⚠️ Message To All Users By Harsh:\n\n" + command[1]
             with open(USER_FILE, "r") as file:
                 user_ids = file.read().splitlines()
                 for user_id in user_ids:
